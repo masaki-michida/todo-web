@@ -12,6 +12,7 @@
     "lint": "npm run lint:js"
   },
   "dependencies": {
+    "material-design-icons-iconfont": "^5.0.1",
     "nuxt": "^2.13.0"
   },
   "devDependencies": {
