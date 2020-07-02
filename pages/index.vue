@@ -1,5 +1,7 @@
 <template>
   <div>
+    <p>ユーザー</p>
+    <p v-if="user">{{ user.name }}</p>
     <AddTodo v-on:submit="addTodo" />
     <TodoList v-bind:todos = todos />
   </div>
@@ -13,6 +15,11 @@ export default {
   components: {
     AddTodo,
     TodoList
+  },
+  computed: {
+    user () {
+      return this.$store.state.currentUser
+    }
   },
   data () {
     return {

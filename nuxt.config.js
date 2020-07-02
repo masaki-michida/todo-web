@@ -37,7 +37,8 @@ export default {
   ** https://nuxtjs.org/guide/plugins
   */
   plugins: [
-    '@/plugins/vuetify.js'
+    '@/plugins/vuetify.js',
+    '@/plugins/auth-check.js'
   ],
   /*
   ** Auto import components
@@ -50,7 +51,8 @@ export default {
   buildModules: [
     // Doc: https://github.com/nuxt-community/eslint-module
     '@nuxtjs/eslint-module',
-    '@nuxtjs/vuetify'
+    '@nuxtjs/vuetify',
+    '@nuxtjs/dotenv'
   ],
   /*
   ** Nuxt.js modules

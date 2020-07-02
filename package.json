@@ -12,6 +12,9 @@
     "lint": "npm run lint:js"
   },
   "dependencies": {
+    "@nuxtjs/dotenv": "^1.4.1",
+    "axios": "^0.19.2",
+    "firebase": "^7.15.5",
     "material-design-icons-iconfont": "^5.0.1",
     "nuxt": "^2.13.0"
   },
