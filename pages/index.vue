@@ -1,16 +1,15 @@
 <template>
-  <div>
-    <p>ユーザー</p>
-    <p v-if="user">{{ user.name }}</p>
-    <AddTodo v-on:submit="addTodo" />
-    <TodoList v-bind:todos = todos />
+  <div v-if="user">
+    <p>{{user.name}}</p>
+    <AddTodo @submit="addTodo" />
+    <TodoList :todos="user.todos" />
   </div>
 </template>
 
 <script>
 import AddTodo from '@/components/AddTodo'
 import TodoList from '@/components/TodoList'
-
+import axios from '@/plugins/axios'
 export default {
   components: {
     AddTodo,
@@ -21,15 +20,12 @@ export default {
       return this.$store.state.currentUser
     }
   },
-  data () {
-    return {
-      todos: []
-    }
-  },
   methods: {
-    addTodo (title) {
-      this.todos.push({
-        title
+    async addTodo (todo) {
+      const { data } = await axios.post('/v1/todos', { todo })
+      this.$store.commit('setUser', {
+        ...this.user,
+        todos: [...this.user.todos, data]
       })
     }
   }
