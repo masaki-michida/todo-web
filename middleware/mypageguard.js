@@ -10,10 +10,10 @@ export default function ({
       if (!newUser) {
         switch (route.name) {
           case 'index':
-            redirect('/login')
+            redirect('/sighnin')
             break
           case 'mypage':
-            redirect('/login')
+            redirect('/sihhnin')
             break
           default:
         }

@@ -140,7 +140,7 @@ export default {
           {
             icon: 'mdi-apps',
             title: 'ログイン',
-            to: '/login'
+            to: '/signin'
           },
           {
             icon: 'mdi-chart-bubble',
