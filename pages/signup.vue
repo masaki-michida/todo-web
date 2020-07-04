@@ -66,6 +66,7 @@ export default {
           })
         })
         .catch((error) => {
+          setTimeout(() => this.$store.commit('setLoading', false), 1000)
           this.error = ((code) => {
             switch (code) {
               case 'auth/email-already-in-use':
