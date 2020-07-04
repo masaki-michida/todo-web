@@ -23,7 +23,7 @@
           :append-icon="show2 ? 'mdi-eye' : 'mdi-eye-off'"
           @click:append="show2 = !show2"
         ></v-text-field>
-        <v-btn class="mr-4" @click="signup">submit</v-btn>
+        <v-btn class="mr-4" @click="signup">登録</v-btn>
         <p v-if="error" class="errors">{{error}}</p>
       </form>
     </v-col>
@@ -62,7 +62,7 @@ export default {
           axios.post('/v1/users', { user }).then(() => {
             this.$store.commit('setLoading', false)
             this.$store.commit('setUser', res.data)
-            this.$router.push('/')
+            this.$router.push('/todos')
           })
         })
         .catch((error) => {

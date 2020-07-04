@@ -12,7 +12,7 @@
             required
           >
           </v-text-field>
-          <v-btn class="mr-4" v-on:click="login"></v-btn>
+          <v-btn class="mr-4" v-on:click="login">ログイン</v-btn>
           <p v-if="error" class="errors">{{ error }}</p>
         </form>
       </v-col>

@@ -22,7 +22,7 @@ export default {
         .signOut()
         .then(() => {
           this.$store.commit('setUser', null)
-          this.$router.push('/signin')
+          this.$router.push('/')
         })
     }
   }
