@@ -1,5 +1,9 @@
 <template>
   <v-app dark>
+    <div>
+      <loading></loading>
+      <success></success>
+    </div>
     <v-navigation-drawer
       v-model="drawer"
       :mini-variant="miniVariant"
@@ -89,29 +93,71 @@
 </template>
 
 <script>
+import Loading from '@/components/Loading'
+import Success from '@/components/Success'
 export default {
   data () {
     return {
       clipped: false,
       drawer: false,
       fixed: false,
-      items: [
-        {
-          icon: 'mdi-apps',
-          title: 'Todos',
-          to: '/'
-        },
-        {
-          icon: 'mdi-chart-bubble',
-          title: 'mypage',
-          to: '/mypage'
-        }
-      ],
       miniVariant: false,
       right: true,
       rightDrawer: false,
-      title: 'Todoapp'
+      title: 'Todo App'
     }
+  },
+  components: {
+    Loading,
+    Success
+  },
+  computed: {
+    user () {
+      return this.$store.state.currentUser
+    },
+    loading () {
+      return this.$store.state.loading
+    },
+    success () {
+      return this.$store.state.success
+    },
+    items () {
+      if (this.user) {
+        return [
+          {
+            icon: 'mdi-apps',
+            title: 'Todos',
+            to: '/'
+          },
+          {
+            icon: 'mdi-chart-bubble',
+            title: 'mypage',
+            to: '/mypage'
+          }
+        ]
+      } else {
+        return [
+          {
+            icon: 'mdi-apps',
+            title: 'ログイン',
+            to: '/login'
+          },
+          {
+            icon: 'mdi-chart-bubble',
+            title: '新規登録',
+            to: '/signup'
+          }
+        ]
+      }
+    }
+  },
+  created () {
+    // this.$store.watch(
+    //   state => state.currentUser,
+    //   async (newUser, oldUser) => {
+    //     this.mount = true;
+    //   }
+    // );
   }
 }
 </script>
