@@ -2,7 +2,7 @@
 ## 機能
   リストの追加、削除、ユーザー登録
 ## demo
-https://github.com/masaki-michida/todo-web/wiki/images/todo_optima.gif
+https://github.com/masaki-michida/todo-web/wiki/images/todo_demo.gif
 ## 本番環境
   https://sample-2046a.firebaseapp.com/signin<br>
   test account: 
