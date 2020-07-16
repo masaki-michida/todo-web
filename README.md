@@ -6,8 +6,10 @@
   test account: 
   test@gmail.com<br>
   password: testtest
+## 制作背景
+  マルチタスクの時に次のタスクを覚えつつ目の前のタスクをこなしていると、覚えておくことにリソースを取られて目の前のタスクに集中しにくい問題。
 ## 制作理由
-  javascript,node.jsの克服、railsAPIserver学習、firebaseの学習のために制作
+  タスクを一時的にアプリケーションで一覧保存してかつ簡単に削除できるようにすることで解決。
 ## 使用技術
   vuetify vue.js<br>
   apiserver: rails heroku<br>
