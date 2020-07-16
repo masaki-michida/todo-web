@@ -2,7 +2,7 @@
 ## 機能
   リストの追加、削除、ユーザー登録
 ## demo
-https://github.com/masaki-michida/todo-web/wiki/images/todoりすとでも.gif
+https://github.com/masaki-michida/todo-web/wiki/images/todo\343\202\212\343\201\231\343\201\250\343\201\247\343\202\202.gif
 ## 本番環境
   https://sample-2046a.firebaseapp.com/signin<br>
   test account: 
